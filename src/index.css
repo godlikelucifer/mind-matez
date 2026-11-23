@@ -1,0 +1,15 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { color:#e2e8f0; background-color:#070b1a; min-height:100vh;
+  background-image: radial-gradient(60rem 40rem at 15% -10%, rgba(124,58,237,.28), transparent 60%),
+    radial-gradient(50rem 36rem at 95% 10%, rgba(34,211,238,.12), transparent 60%),
+    radial-gradient(1px 1px at 20px 30px,#fff6,transparent),radial-gradient(1px 1px at 90px 120px,#c4b5fd88,transparent);
+  background-size:auto,auto,160px 160px,230px 230px; background-attachment:fixed; }
+@layer components {
+  .glass { @apply rounded-3xl border border-violet-400/20 bg-white/[0.04] backdrop-blur-xl; }
+  .btn { @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 disabled:opacity-50; }
+  .btn-primary { @apply bg-gradient-to-r from-violet-600 to-indigo-500 text-white shadow-[0_0_28px_rgba(139,92,246,.45)] hover:shadow-[0_0_40px_rgba(139,92,246,.7)]; }
+  .btn-ghost { @apply border border-white/15 text-slate-200 hover:bg-white/10; }
+  .input { @apply w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-violet-400 focus:outline-none; }
+}
+h1,h2,h3 { font-family:'Space Grotesk',sans-serif; }
+@media (prefers-reduced-motion: reduce) { * { animation-duration:.01ms !important; transition-duration:.01ms !important; } }

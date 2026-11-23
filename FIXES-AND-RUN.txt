@@ -1,0 +1,7 @@
+Mind Mate render/navigation patch
+
+Fixes: App route scroll effect now returns no cleanup value; persistence effect is explicitly void; Companion newChat is defined before fallback UI uses it.
+
+Run from the folder containing package.json:
+1) npm.cmd install
+2) npm.cmd run dev
